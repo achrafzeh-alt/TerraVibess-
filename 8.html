@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraVibes - Agence de Voyage</title>
+
+    <link rel="stylesheet" type="text/css" href="8.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+
+     
+    
+    <nav>
+        <div class="logo">TERRA<span>VIBES</span></div>
+        <ul class="nav-links">
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#offres">Destinations</a></li>
+            <li><a href="#">Circuits Maroc</a></li>
+            <li><a href="mailto:contact@terravibes.com">Contact</a></li>
+        </ul>
+        <div class="contact-info">
+            <a href="tel:+212611239483" style="color: var(--primary); text-decoration: none; font-weight: bold;">
+                <i class="fas fa-phone"></i> +212 6 11 23 94 83
+            </a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>Découvrez le monde autrement</h1>
+        <p>Plus de 500 circuits organisés au Maroc et à l'international.</p>
+        <div class="search-container">
+            <select id="continentSelect" class="search-select" onchange="updateCountries()">
+                <option value="">Continent</option>
+                <option value="Afrique">Afrique</option>
+                <option value="Europe">Europe</option>
+                <option value="Asie">Asie</option>
+                <option value="Amérique">Amérique</option>
+            </select>
+            <select id="countrySelect" class="search-select" onchange="updateCities()">
+                <option value="">Pays</option>
+            </select>
+            <select id="citySelect" class="search-select" onchange="updateCityFilter()">
+                <option value="">Ville</option>
+            </select>
+            <button class="search-btn" onclick="filterVoyages()">RECHERCHER</button>
+        </div>
+    </section>
+
+    <section id="offres">
+        <div class="section-header">
+            <h2>Nos Meilleures Offres</h2>
+            <div></div>
+        </div>
+        <div class="voyage-grid" id="grid">
+            </div>
+    </section>
+
+    <div id="itineraryModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modalBody">
+                </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <div class="footer-logo">TERRA<span>VIBES</span></div>
+                <p>Votre agence de voyage de confiance à Marrakech depuis 2019.</p>
+            </div>
+            <div>
+                <h4>Liens rapides</h4>
+                <p>Voyages Organisés</p>
+                <p>Hébergement</p>
+                <p>Transport</p>
+            </div>
+            <div>
+                <h4>Suivez-nous</h4>
+                <div class="footer-socials">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2026 TerraVibes. Réalisé par un étudiant en Architecture & Dev.
+        </div>
+    </footer>
+    <script src="8.js"></script>
+</body>
+</html>
